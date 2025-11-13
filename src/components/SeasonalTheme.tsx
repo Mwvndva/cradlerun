@@ -13,18 +13,18 @@ const seasons = [
   {
     year: 2027,
     name: "GREEN HEART",
-    cause: "Mental Health Awareness",
+    cause: "COMING SOON",
     color: "Green",
     status: "coming",
-    partners: ["TBA"]
+    partners: ["Byblos"]
   },
   {
     year: 2028,
     name: "BLUE TIDE",
-    cause: "Ocean Conservation",
+    cause: "COMING SOON",
     color: "Blue",
     status: "coming",
-    partners: ["TBA"]
+    partners: ["Byblos"]
   }
 ];
 

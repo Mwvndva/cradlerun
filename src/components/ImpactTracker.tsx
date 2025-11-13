@@ -4,30 +4,8 @@ import { Card } from "@/components/ui/card";
 const ImpactTracker = () => {
   const [kmDriven, setKmDriven] = useState(0);
   const [fundsRaised, setFundsRaised] = useState(0);
-  const targetKm = 3000;
+  const targetKm = 1250;
   const targetFunds = 3000000; // KSh 3M
-  
-  // Simulated counter animation on mount
-  useEffect(() => {
-    const kmInterval = setInterval(() => {
-      setKmDriven(prev => {
-        const next = prev + 50;
-        return next >= 1250 ? 1250 : next; // Demo value
-      });
-    }, 50);
-    
-    const fundsInterval = setInterval(() => {
-      setFundsRaised(prev => {
-        const next = prev + 25000;
-        return next >= 1250000 ? 1250000 : next; // Demo value
-      });
-    }, 50);
-    
-    return () => {
-      clearInterval(kmInterval);
-      clearInterval(fundsInterval);
-    };
-  }, []);
   
   const kmProgress = (kmDriven / targetKm) * 100;
   const fundsProgress = (fundsRaised / targetFunds) * 100;
@@ -101,7 +79,7 @@ const ImpactTracker = () => {
               YOUR JOURNEY CREATES IMPACT
             </p>
             <p className="text-lg opacity-90">
-              Every car that joins adds KSh 1,000 to support GBV shelters across Kenya. 
+              Every car that joins adds support GBV shelters across Kenya. 
               Together, we're not just driving — we're driving change.
             </p>
           </div>

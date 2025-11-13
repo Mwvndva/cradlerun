@@ -2,14 +2,11 @@ import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 
 const routeStops = [
-  { day: 0, location: "COMING SOON" },
   { day: 1, location: "COMING SOON" },
   { day: 2, location: "COMING SOON" },
   { day: 3, location: "COMING SOON" },
   { day: 4, location: "COMING SOON" },
-  { day: 5, location: "COMING SOON" },
-  { day: 6, location: "COMING SOON" },
-  { day: 7, location: "COMING SOON" }
+  { day: 5, location: "COMING SOON" }
 ];
 
 const RouteMap = () => {
@@ -39,7 +36,7 @@ const RouteMap = () => {
                   className="relative p-6 ml-0 md:ml-20 hover:shadow-lg transition-all duration-300 border-l-4 border-purple-medium"
                 >
                   {/* Pin Icon */}
-                  <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-light to-purple-deep flex items-center justify-center hidden md:flex">
+                                    <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-light to-purple-deep items-center justify-center hidden md:flex">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   
