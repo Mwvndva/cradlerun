@@ -10,7 +10,7 @@ const benefits = [
   {
     icon: Utensils,
     title: "14 Meal Vouchers",
-    description: "KFC • Java • Pizza Inn"
+    description: "Coming Soon"
   },
   {
     icon: PartyPopper,
