@@ -2,14 +2,14 @@ import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 
 const routeStops = [
-  { day: 0, location: "Nairobi - KICC", km: 0, meal: "Welcome Dinner", talk: "Rally Briefing & GBV Statistics" },
-  { day: 1, location: "Nairobi to Nakuru", km: 160, meal: "Lunch - Java", talk: "Recognizing Signs of GBV" },
-  { day: 2, location: "Nakuru to Eldoret", km: 240, meal: "Dinner - KFC", talk: "Support Systems & Resources" },
-  { day: 3, location: "Eldoret", km: 0, meal: "Purple Rave", talk: "Survivor Stories" },
-  { day: 4, location: "Eldoret to Kisumu", km: 300, meal: "Lunch - Pizza Inn", talk: "Community Action Steps" },
-  { day: 5, location: "Kisumu to Nairobi", km: 350, meal: "Dinner - Java", talk: "Legal Protection & Rights" },
-  { day: 6, location: "Nairobi to Mombasa", km: 480, meal: "Lunch - KFC", talk: "Hotline 1195 & Emergency Response" },
-  { day: 7, location: "Mombasa", km: 0, meal: "Purple Finale", talk: "Our Commitment Moving Forward" }
+  { day: 0, location: "COMING SOON" },
+  { day: 1, location: "COMING SOON" },
+  { day: 2, location: "COMING SOON" },
+  { day: 3, location: "COMING SOON" },
+  { day: 4, location: "COMING SOON" },
+  { day: 5, location: "COMING SOON" },
+  { day: 6, location: "COMING SOON" },
+  { day: 7, location: "COMING SOON" }
 ];
 
 const RouteMap = () => {
@@ -46,15 +46,15 @@ const RouteMap = () => {
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div>
                       <div className="text-3xl font-bebas text-purple-deep">Day {stop.day}</div>
-                      <div className="text-sm text-muted-foreground">{stop.km} KM</div>
+                      <div className="text-sm text-muted-foreground">COMING SOON</div>
                     </div>
                     <div className="md:col-span-3">
                       <h3 className="text-xl font-bebas text-foreground mb-2">{stop.location}</h3>
                       <p className="text-sm text-muted-foreground mb-2">
-                        <strong>Meal:</strong> {stop.meal}
+                        <strong>Meal:</strong> COMING SOON
                       </p>
                       <p className="text-sm text-foreground">
-                        <strong className="text-accent">Purple Pit-Stop Talk:</strong> {stop.talk}
+                        <strong className="text-accent">Purple Pit-Stop Talk:</strong> COMING SOON
                       </p>
                     </div>
                   </div>

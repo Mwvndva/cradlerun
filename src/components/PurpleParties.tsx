@@ -4,27 +4,27 @@ import { Calendar, MapPin, Music } from "lucide-react";
 const parties = [
   {
     day: "Day 0",
-    name: "KICC Purple Kickoff",
-    location: "Nairobi, KICC",
-    description: "Silent auction for GBV shelters. Meet fellow rally participants and set intentions for the journey ahead.",
+    name: "START",
+    location: "COMING SOON",
+    description: "COMING SOON",
     icon: "🎯",
-    time: "6:00 PM - 10:00 PM"
+    time: "COMING SOON"
   },
   {
-    day: "Day 3",
-    name: "Eldoret Purple Rave",
-    location: "Eldoret City",
-    description: "Survivor stories shared through art and dance. High-energy celebration of resilience and community.",
+    day: "Day 4",
+    name: "PARTY",
+    location: "COMING SOON",
+    description: "COMING SOON",
     icon: "🎵",
-    time: "7:00 PM - 11:00 PM"
+    time: "COMING SOON"
   },
   {
     day: "Day 7",
-    name: "Mombasa Purple Finale",
-    location: "Mombasa Beach",
-    description: "Beach candlelight vigil. Reflect on the journey and commit to continued action against GBV.",
+    name: "FINAL BASH",
+    location: "COMING SOON",
+    description: "COMING SOON",
     icon: "🕯️",
-    time: "6:00 PM - 9:00 PM"
+    time: "COMING SOON"
   }
 ];
 

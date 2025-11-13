@@ -68,7 +68,7 @@ const Hero = () => {
             className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 h-auto"
             onClick={() => window.open('https://cradlerun.co.ke/pay-purple', '_blank')}
           >
-            GET PURPLE PASS – KSh 30,000
+            COMING SOON
           </Button>
           
           {/* Scroll Indicator */}

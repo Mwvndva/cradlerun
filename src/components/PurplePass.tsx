@@ -5,7 +5,7 @@ const benefits = [
   {
     icon: MapPin,
     title: "7-Day Rally Passport",
-    description: "QR + GPS tracking across all checkpoints"
+    description: "Coming Soon"
   },
   {
     icon: Utensils,
@@ -15,22 +15,22 @@ const benefits = [
   {
     icon: PartyPopper,
     title: "3 Purple Parties",
-    description: "Nairobi • Eldoret • Mombasa"
+    description: "Coming Soon"
   },
   {
     icon: Shirt,
     title: "Purple Merch Pack",
-    description: "Jacket • Cap • Keyholder"
+    description: "Coming Soon"
   },
   {
     icon: Award,
     title: "Purple Ribbon Finisher Medal",
-    description: "Limited edition commemorative medal"
+    description: "Coming Soon"
   },
   {
     icon: FileCheck,
     title: "GBV Awareness Certificate",
-    description: "Co-signed by LVCT Health"
+    description: "Coming Soon"
   }
 ];
 
