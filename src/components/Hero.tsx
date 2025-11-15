@@ -48,7 +48,7 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-8 mb-10">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bebas text-secondary">7</div>
+              <div className="text-4xl md:text-5xl font-bebas text-secondary">5</div>
               <div className="text-sm text-white/80 uppercase tracking-wide">Days</div>
             </div>
             <div className="text-center">

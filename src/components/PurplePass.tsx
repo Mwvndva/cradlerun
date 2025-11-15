@@ -4,33 +4,33 @@ import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck } from "lucide-r
 const benefits = [
   {
     icon: MapPin,
-    title: "7-Day Rally Passport",
-    description: "Coming Soon"
+    title: "5-Day Rally Tag",
+    description: "1 Purple driver tag + 1 Co-driver white tag"
   },
   {
     icon: Utensils,
-    title: "14 Meal Vouchers",
-    description: "Coming Soon"
+    title: "10 Meal Vouchers",
+    description: "2 meals/day for 5 days"
   },
   {
     icon: PartyPopper,
-    title: "3 Purple Parties",
+    title: "Finale Party voucher",
     description: "Coming Soon"
   },
   {
     icon: Shirt,
     title: "Purple Merch Pack",
-    description: "Coming Soon"
+    description: "Branded denim jacket, branded cap, branded water bottle, keyholder"
   },
   {
     icon: Award,
-    title: "Purple Ribbon Finisher Medal",
+    title: "GBV Awareness Certificate",
     description: "Coming Soon"
   },
   {
     icon: FileCheck,
-    title: "GBV Awareness Certificate",
-    description: "Coming Soon"
+    title: "Rally challenges",
+    description: "To make the rally interactive and fun"
   }
 ];
 
@@ -43,7 +43,7 @@ const PurplePass = () => {
             PURPLE PASS
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-            1 Ticket + 1 Car + 1 Driver
+            1 Ticket + 1 Car + 1 Driver + 1 Co-driver
           </p>
           <div className="inline-block bg-gradient-to-r from-purple-light to-purple-medium text-white px-8 py-3 rounded-full font-semibold text-lg">
             All-Inclusive Rally Experience

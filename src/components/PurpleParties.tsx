@@ -3,7 +3,7 @@ import { Calendar, MapPin, Music } from "lucide-react";
 
 const parties = [
   {
-    day: "Day 0",
+    day: "Day 1",
     name: "START",
     location: "COMING SOON",
     description: "COMING SOON",
@@ -11,7 +11,7 @@ const parties = [
     time: "COMING SOON"
   },
   {
-    day: "Day 4",
+    day: "Day 3",
     name: "PARTY",
     location: "COMING SOON",
     description: "COMING SOON",
@@ -19,7 +19,7 @@ const parties = [
     time: "COMING SOON"
   },
   {
-    day: "Day 7",
+    day: "Day 5",
     name: "FINAL BASH",
     location: "COMING SOON",
     description: "COMING SOON",

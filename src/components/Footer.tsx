@@ -46,7 +46,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4" />
                 <div>
                   <div className="font-semibold">Event Info</div>
-                  <a href="mailto:info@cradlerun.co.ke" className="opacity-90 hover:opacity-100">info@cradlerun.co.ke</a>
+                  <a href="mailto:info@cradlerun.co.ke" className="opacity-90 hover:opacity-100">cradlerunafrica@outlook.com</a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
