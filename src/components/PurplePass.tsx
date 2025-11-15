@@ -43,7 +43,7 @@ const PurplePass = () => {
             PURPLE PASS
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-6">
-            1 Ticket + 1 Car + 1 Driver + 1 Co-driver
+            1 Car + 1 Driver + 1 Co-driver
           </p>
           <div className="inline-block bg-gradient-to-r from-purple-light to-purple-medium text-white px-8 py-3 rounded-full font-semibold text-lg">
             All-Inclusive Rally Experience
