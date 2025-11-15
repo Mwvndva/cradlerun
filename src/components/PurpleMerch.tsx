@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import jacketImage from "@/assets/merch-jacket.jpg";
 import hatImage from "@/assets/merch-hat.jpg";
 import keyholderImage from "@/assets/merch-keyholder.jpg";
+import bottleImage from "@/assets/merch-bottle.jpg";
 
 const merchItems = [
   {
@@ -21,6 +22,12 @@ const merchItems = [
     description: "Purple anodized footprint with tech functionality",
     features: ["Links to GBV hotline 1195", "Durable construction", "Compact design"],
     image: keyholderImage
+  },
+  {
+    name: "Purple Mile Water Bottle",
+    description: "Stay hydrated and show your support",
+    features: ["Insulated stainless steel", "Leak-proof cap", "#EndGBV branding"],
+    image: bottleImage
   }
 ];
 
