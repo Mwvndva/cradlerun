@@ -8,11 +8,6 @@ const benefits = [
     description: "1 Purple driver tag + 1 Co-driver white tag"
   },
   {
-    icon: Utensils,
-    title: "10 Meal Vouchers",
-    description: "2 meals/day for 5 days"
-  },
-  {
     icon: PartyPopper,
     title: "Finale Party voucher",
     description: "Coming Soon"
