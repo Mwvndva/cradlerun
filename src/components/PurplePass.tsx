@@ -25,7 +25,7 @@ const benefits = [
   {
     icon: Award,
     title: "GBV Awareness Certificate",
-    description: "Coming Soon"
+    description: "Recognition for your part in fighting GBV"
   },
   {
     icon: FileCheck,
