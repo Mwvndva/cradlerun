@@ -45,10 +45,13 @@ const PurpleMerch = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {merchItems.map((item, index) => (
+          {merchItems.map((item, index) => {
+            const isLast = index === merchItems.length - 1;
+            const cardClass = `overflow-hidden group hover:shadow-2xl transition-all duration-500 ${isLast ? 'md:col-start-2 md:col-end-3' : ''}`;
+            return (
             <Card 
               key={index}
-              className="overflow-hidden group hover:shadow-2xl transition-all duration-500"
+              className={cardClass}
             >
               <div className="h-80 relative overflow-hidden bg-muted">
                 <img 
@@ -75,7 +78,8 @@ const PurpleMerch = () => {
                 </ul>
               </div>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

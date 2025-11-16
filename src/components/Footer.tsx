@@ -67,6 +67,9 @@ const Footer = () => {
           <p className="text-sm opacity-80 mb-2">
             © 2026 CRADLE RUN™. All rights reserved.
           </p>
+          <p className="text-sm opacity-80 mb-2">
+            Powered by Evolve Labs
+          </p>
           <p className="text-xs opacity-70">
             CRADLE RUN is a registered trademark. Proceeds support Gender-Based Violence awareness and shelter programs across Kenya.
           </p>

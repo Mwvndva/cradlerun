@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck } from "lucide-react";
+import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck, Home } from "lucide-react";
 
 const benefits = [
   {
@@ -21,6 +21,11 @@ const benefits = [
     icon: Shirt,
     title: "Purple Merch Pack",
     description: "Branded denim jacket, branded cap, branded water bottle, keyholder"
+  },
+  {
+    icon: Home,
+    title: "Accommodation",
+    description: "comming soon"
   },
   {
     icon: Award,
@@ -53,10 +58,14 @@ const PurplePass = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
+            // If this is the last benefit, center it on large screens (3-column layout)
+            const isLast = index === benefits.length - 1;
+            const cardClasses = `p-6 bg-card hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-purple-medium group ${isLast ? 'lg:col-start-2 lg:col-end-3' : ''}`;
+
             return (
               <Card 
                 key={index} 
-                className="p-6 bg-card hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-purple-medium group"
+                className={cardClasses}
               >
                 <div className="flex flex-col items-center text-center">
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-light to-purple-medium flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
