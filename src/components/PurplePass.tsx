@@ -10,7 +10,7 @@ const benefits = [
   {
     icon: PartyPopper,
     title: "Finale Party voucher",
-    description: "Coming Soon"
+    description: "Surprise performance"
   },
   {
     icon: Shirt,
@@ -20,7 +20,7 @@ const benefits = [
   {
     icon: Home,
     title: "Accommodation",
-    description: "comming soon"
+    description: "breakfast and dinner included"
   },
   {
     icon: Award,
@@ -50,12 +50,10 @@ const PurplePass = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
-            // If this is the last benefit, center it on large screens (3-column layout)
-            const isLast = index === benefits.length - 1;
-            const cardClasses = `p-6 bg-card hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-purple-medium group ${isLast ? 'lg:col-start-2 lg:col-end-3' : ''}`;
+            const cardClasses = `p-6 bg-card hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-purple-medium group`;
 
             return (
               <Card 
