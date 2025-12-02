@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cradle-run.jpg";
 import ribbonIcon from "@/assets/purple-ribbon.png";
+import { MembershipModal } from "./MembershipModal";
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -66,10 +69,15 @@ const Hero = () => {
             size="lg" 
             variant="hero"
             className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 h-auto"
-            onClick={() => window.open('https://cradlerun.co.ke/pay-purple', '_blank')}
+            onClick={() => setIsModalOpen(true)}
           >
-            COMING SOON
+            Become a Member
           </Button>
+          
+          <MembershipModal 
+            isOpen={isModalOpen} 
+            onClose={() => setIsModalOpen(false)} 
+          />
           
           {/* Scroll Indicator */}
           <div className="mt-16 animate-bounce">

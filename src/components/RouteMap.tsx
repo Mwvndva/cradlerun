@@ -2,11 +2,31 @@ import { Card } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 
 const routeStops = [
-  { day: 1, location: "COMING SOON" },
-  { day: 2, location: "COMING SOON" },
-  { day: 3, location: "COMING SOON" },
-  { day: 4, location: "COMING SOON" },
-  { day: 5, location: "COMING SOON" }
+  { 
+    day: 1, 
+    location: "ELDORET",
+    description: "Kick Off Nairobi → Naivasha → Nakuru → Eldoret (Night 1)"
+  },
+  { 
+    day: 2, 
+    location: "KISUMU",
+    description: "Eldoret → Marigat → Kabartonjo → Chesegon → Kitale → Kakamega → Kisumu (Night 2)"
+  },
+  { 
+    day: 3, 
+    location: "NAROK",
+    description: "Kisumu → Homa Bay → Mbita → Sori → Migori → Isebania → Narok (Night 3)"
+  },
+  { 
+    day: 4, 
+    location: "NAKURU",
+    description: "Narok → Bomet → Kericho → Nandi Hills → Kapsabet → Eldoret → Nakuru (Night 4)"
+  },
+  { 
+    day: 5, 
+    location: "NAIROBI",
+    description: "Nakuru → Nyahururu → Nanyuki → Meru → Embu → Kerugoya → Sagana → Thika → Nairobi (Finale)"
+  }
 ];
 
 const RouteMap = () => {
@@ -36,22 +56,20 @@ const RouteMap = () => {
                   className="relative p-6 ml-0 md:ml-20 hover:shadow-lg transition-all duration-300 border-l-4 border-purple-medium"
                 >
                   {/* Pin Icon */}
-                                    <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-light to-purple-deep items-center justify-center hidden md:flex">
+                   <div className="absolute -left-8 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-light to-purple-deep items-center justify-center hidden md:flex">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                     <div>
                       <div className="text-3xl font-bebas text-purple-deep">Day {stop.day}</div>
-                      <div className="text-sm text-muted-foreground">COMING SOON</div>
+                      <div className="text-sm text-muted-foreground"></div>
                     </div>
                     <div className="md:col-span-3">
                       <h3 className="text-xl font-bebas text-foreground mb-2">{stop.location}</h3>
-                      <p className="text-sm text-muted-foreground mb-2">
-                        <strong>Meal:</strong> COMING SOON
-                      </p>
+                      
                       <p className="text-sm text-foreground">
-                        <strong className="text-accent">Purple Pit-Stop Talk:</strong> COMING SOON
+                        {stop.description}
                       </p>
                     </div>
                   </div>

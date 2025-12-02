@@ -3,22 +3,6 @@ import { Calendar, MapPin, Music } from "lucide-react";
 
 const parties = [
   {
-    day: "Day 1",
-    name: "START",
-    location: "COMING SOON",
-    description: "COMING SOON",
-    icon: "🎯",
-    time: "COMING SOON"
-  },
-  {
-    day: "Day 3",
-    name: "PARTY",
-    location: "COMING SOON",
-    description: "COMING SOON",
-    icon: "🎵",
-    time: "COMING SOON"
-  },
-  {
     day: "Day 5",
     name: "FINAL BASH",
     location: "COMING SOON",
@@ -37,11 +21,11 @@ const PurpleParties = () => {
             PURPLE PARTIES
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Three nights of connection, awareness, and celebration
+            The grand finale celebration
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
           {parties.map((party, index) => (
             <Card 
               key={index}

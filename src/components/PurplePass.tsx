@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck, Home } from "lucide-react";
+import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck, Home, Heart, Tags, Key } from "lucide-react";
 
 const benefits = [
   {
@@ -31,6 +31,21 @@ const benefits = [
     icon: FileCheck,
     title: "Rally challenges",
     description: "To make the rally interactive and fun"
+  },
+  {
+    icon: Heart,
+    title: "Donation to Purple Mile",
+    description: "Supporting the cause and making a difference"
+  },
+  {
+    icon: Tags,
+    title: "Decals",
+    description: "Official vehicle decals for the rally"
+  },
+  {
+    icon: Key,
+    title: "Membership",
+    description: "Exclusive access to the Cradle Run community"
   }
 ];
 
