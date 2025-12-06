@@ -86,7 +86,7 @@ export function MembershipModal({ isOpen, onClose }: MembershipModalProps) {
           <Button 
             onClick={() => {
               onClose();
-              window.open('https://cradlerun.co.ke/pay-purple', '_blank');
+              window.open('https://paystack.shop/cradle-run', '_blank');
             }}
             className="bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white px-8 py-6 text-lg"
           >
