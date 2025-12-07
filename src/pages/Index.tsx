@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import PurplePass from "@/components/PurplePass";
 import PurpleMerch from "@/components/PurpleMerch";
 import RouteMap from "@/components/RouteMap";
+import Partners from "@/components/Partners";
 import PurpleParties from "@/components/PurpleParties";
 import ImpactTracker from "@/components/ImpactTracker";
 import SeasonalTheme from "@/components/SeasonalTheme";
@@ -15,6 +16,7 @@ const Index = () => {
       <PurplePass />
       <PurpleMerch />
       <RouteMap />
+      <Partners />
       <PurpleParties />
       <ImpactTracker />
       <SeasonalTheme />

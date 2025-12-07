@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck, Home } from "lucide-react";
+import { MapPin, Utensils, PartyPopper, Shirt, Award, FileCheck, Home, Heart, Sticker, Crown } from "lucide-react";
 
 const benefits = [
   {
@@ -31,6 +31,21 @@ const benefits = [
     icon: FileCheck,
     title: "Rally challenges",
     description: "To make the rally interactive and fun"
+  },
+  {
+    icon: Heart,
+    title: "Donation to the cause",
+    description: "Supporting GBV awareness and prevention initiatives"
+  },
+  {
+    icon: Sticker,
+    title: "Decals",
+    description: "Exclusive Purple Mile Ride vehicle decals and stickers"
+  },
+  {
+    icon: Crown,
+    title: "Lifetime membership",
+    description: "Exclusive lifetime access to Purple Mile Ride community and events"
   }
 ];
 
@@ -50,7 +65,7 @@ const PurplePass = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             const cardClasses = `p-6 bg-card hover:shadow-xl transition-all duration-300 border-2 border-border hover:border-purple-medium group`;
