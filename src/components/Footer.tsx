@@ -26,7 +26,7 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                Byblos
+                USIKIMYE
               </li>
             </ul>
           </div>

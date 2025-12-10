@@ -8,7 +8,7 @@ const seasons = [
     cause: "End Gender-Based Violence",
     color: "Purple",
     status: "active",
-    partners: ["Byblos"]
+    partners: ["USIKIMYE"]
   },
   {
     year: 2027,
@@ -16,7 +16,7 @@ const seasons = [
     cause: "COMING SOON",
     color: "Green",
     status: "coming",
-    partners: ["Byblos"]
+    partners: ["COMING SOON"]
   },
   {
     year: 2028,
@@ -24,7 +24,7 @@ const seasons = [
     cause: "COMING SOON",
     color: "Blue",
     status: "coming",
-    partners: ["Byblos"]
+    partners: ["COMING SOON"]
   }
 ];
 
