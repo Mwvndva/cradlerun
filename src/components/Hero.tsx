@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Circle } from "lucide-react";
 import heroImage from "@/assets/hero-cradle-run.jpg";
 import ribbonIcon from "@/assets/purple-ribbon.png";
 import { MembershipModal } from "./MembershipModal";
+import { NavLink } from "./NavLink";
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -68,11 +70,28 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="hero"
-            className="text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 h-auto"
+            className="text-2xl md:text-3xl px-12 md:px-16 py-8 md:py-10 h-auto"
             onClick={() => setIsModalOpen(true)}
           >
             Become a Member
           </Button>
+          
+          {/* Impact Tracker Button */}
+          <div className="mt-4">
+            <NavLink 
+              to="/impact"
+              className="inline-block"
+            >
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="text-base md:text-lg px-6 md:px-8 py-4 md:py-6 h-auto bg-purple-600 border-white text-white hover:bg-red-700 transition-all flex items-center gap-3"
+              >
+                <Circle className="w-3 h-3 fill-red-600 animate-pulse" />
+                Live Impact Tracker
+              </Button>
+            </NavLink>
+          </div>
           
           <MembershipModal 
             isOpen={isModalOpen} 

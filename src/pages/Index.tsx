@@ -4,7 +4,6 @@ import PurpleMerch from "@/components/PurpleMerch";
 import RouteMap from "@/components/RouteMap";
 import Partners from "@/components/Partners";
 import PurpleParties from "@/components/PurpleParties";
-import ImpactTracker from "@/components/ImpactTracker";
 import SeasonalTheme from "@/components/SeasonalTheme";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -18,7 +17,6 @@ const Index = () => {
       <RouteMap />
       <Partners />
       <PurpleParties />
-      <ImpactTracker />
       <SeasonalTheme />
       <FAQ />
       <Footer />
