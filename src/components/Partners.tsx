@@ -5,6 +5,11 @@ const partners = [
     name: "Usikimye",
     logo: "/logos/usikimye.png",
     description: "Empowering communities and fighting gender-based violence"
+  },
+  {
+    name: "creasanaa",
+    logo: "/logos/creasanaa-logo.png",
+    description: "Creative solutions for sustainable development"
   }
 ];
 
