@@ -27,8 +27,7 @@ const Partners = () => {
         </div>
         
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             {partners.map((partner, index) => (
               <Card 
                 key={index} 
@@ -51,7 +50,6 @@ const Partners = () => {
                 </div>
               </Card>
             ))}
-            <div></div>
           </div>
         </div>
       </div>
