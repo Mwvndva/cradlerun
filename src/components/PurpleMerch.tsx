@@ -90,14 +90,7 @@ const PurpleMerch = () => {
                   alt={currentItem.name}
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
 
-                {/* Title Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
-                  <h3 className="text-3xl md:text-4xl font-bebas text-white mb-2 leading-tight drop-shadow-md">
-                    {currentItem.name}
-                  </h3>
-                </div>
               </div>
 
             </div>

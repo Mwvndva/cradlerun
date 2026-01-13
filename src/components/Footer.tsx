@@ -9,7 +9,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={ribbonIcon} alt="CRADLE RUN" className="w-12 h-12" />
+
               <div>
                 <div className="font-bebas text-2xl">CRADLE RUN™</div>
                 <div className="text-sm opacity-80">2026 – PURPLE MILE</div>

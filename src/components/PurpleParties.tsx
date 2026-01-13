@@ -4,7 +4,7 @@ import { Calendar, MapPin, Music } from "lucide-react";
 const parties = [
   {
     day: "Day 5",
-    name: "FINAL BASH",
+    name: "FINALE",
     location: "COMING SOON",
     description: "COMING SOON",
     icon: "🕯️",

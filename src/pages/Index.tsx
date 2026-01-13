@@ -11,30 +11,37 @@ import heroImage from "@/assets/hero-luxury.jpg";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      {/* Background Image Container - From Hero to FAQ */}
+    <div className="min-h-screen relative">
+      {/* Fixed Background Layer */}
       <div
-        className="relative bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
       >
-        {/* Dark overlay for better text readability */}
+        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/85"></div>
+      </div>
 
-        {/* Content */}
-        <div className="relative z-10">
-          <Hero />
-          <PurplePass />
-          <PurpleMerch />
-          <RouteMap />
-          <Partners />
-          <PurpleParties />
-          <SeasonalTheme />
-          <FAQ />
-        </div>
+      {/* Content Layer - Scrolls over background */}
+      <div className="relative z-10">
+        <Hero />
+        <PurplePass />
+        <PurpleMerch />
+        <RouteMap />
+        <Partners />
+        <PurpleParties />
+        <SeasonalTheme />
+        <FAQ />
       </div>
 
       {/* Footer outside background */}
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 };

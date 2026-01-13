@@ -15,7 +15,7 @@ const Hero = () => {
           {/* Logo/Subtitle */}
           <div className="mb-8 animate-fade-in">
             <div className="inline-flex items-center gap-3 bg-white/5 backdrop-blur-sm px-6 py-3 rounded-full border border-primary/30">
-              <img src={ribbonIcon} alt="Purple Ribbon" className="w-8 h-8" />
+
               <span className="text-white font-semibold tracking-widest text-sm md:text-base">
                 SEASON 1 • 2026
               </span>
@@ -38,7 +38,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-4 font-light tracking-wide flex items-center justify-center gap-3">
-            <span className="text-primary">▶</span>
+            <span className="text-primary"></span>
             A LUXURY CAR SAFARI. A NETWORK. A LEGACY.
           </p>
 
