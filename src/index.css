@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,153 +10,215 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* CRADLE RUN 2026 - PURPLE MILE Theme */
-    --background: 270 100% 98%;
-    --foreground: 0 0% 0%;
+    /* CRADLE RUN 2026 - DARK AUTOMOTIVE LUXURY Theme */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
 
-    /* Deep Purple - Primary brand color */
-    --primary: 277 68% 36%;
+    /* Vibrant Purple - Primary brand color */
+    --primary: 270 91% 65%;
     --primary-foreground: 0 0% 100%;
 
-    /* Lavender - Secondary */
-    --secondary: 270 100% 86%;
-    --secondary-foreground: 277 68% 36%;
+    /* Bright Purple - Secondary */
+    --secondary: 270 95% 70%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 270 60% 95%;
-    --muted-foreground: 277 20% 40%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    /* Medium Purple - Accent */
-    --accent: 291 64% 42%;
-    --accent-foreground: 0 0% 100%;
+    /* Electric Purple - Accent */
+    --accent: 270 100% 75%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 40% 85%;
-    --input: 270 40% 90%;
-    --ring: 277 68% 36%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 270 91% 65%;
 
-    --radius: 0.75rem;
-    
-    /* Custom Purple Mile colors */
-    --purple-deep: 277 68% 36%;
-    --purple-medium: 291 64% 42%;
-    --purple-light: 270 100% 86%;
-    --purple-gradient-start: 270 100% 86%;
-    --purple-gradient-end: 291 64% 42%;
-    
+    --radius: 0.5rem;
+
+    /* Custom Purple Mile colors - Dark Theme */
+    --purple-deep: 270 91% 65%;
+    --purple-medium: 270 95% 70%;
+    --purple-light: 270 100% 75%;
+    --purple-vibrant: 270 100% 80%;
+    --purple-gradient-start: 270 91% 65%;
+    --purple-gradient-end: 270 100% 75%;
+
     /* Gradients */
-    --gradient-purple: linear-gradient(135deg, hsl(var(--purple-light)), hsl(var(--purple-medium)));
-    --gradient-hero: linear-gradient(180deg, rgba(106, 27, 154, 0.9), rgba(156, 39, 176, 0.95));
-    
+    --gradient-purple: linear-gradient(135deg, hsl(var(--purple-deep)), hsl(var(--purple-light)));
+    --gradient-hero: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(10, 10, 10, 0.9));
+
     /* Shadows with purple glow */
-    --shadow-purple: 0 10px 40px -10px hsl(var(--purple-medium) / 0.5);
-    --shadow-purple-lg: 0 20px 60px -15px hsl(var(--purple-deep) / 0.6);
-    
+    --shadow-purple: 0 10px 40px -10px hsl(var(--purple-deep) / 0.6);
+    --shadow-purple-lg: 0 20px 60px -15px hsl(var(--purple-deep) / 0.8);
+    --shadow-purple-glow: 0 0 30px hsl(var(--purple-deep) / 0.5);
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 0 0% 5%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 0 0% 90%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 270 91% 65%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 100%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 0 0% 15%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 0 0% 20%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 270 91% 65%;
   }
 
   .dark {
-    --background: 277 68% 10%;
+    --background: 0 0% 3%;
     --foreground: 0 0% 100%;
 
-    --card: 277 50% 15%;
+    --card: 0 0% 8%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 277 50% 15%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 270 100% 86%;
-    --primary-foreground: 277 68% 36%;
+    --primary: 270 91% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 277 40% 25%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 270 95% 70%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 277 40% 20%;
-    --muted-foreground: 270 30% 70%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 291 64% 42%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 270 100% 75%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 277 40% 25%;
-    --input: 277 40% 25%;
-    --ring: 270 100% 86%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 270 91% 65%;
   }
 }
 
 /* Custom fonts */
 @layer base {
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
-  
+
   body {
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .font-bebas {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
   }
 }
 
-/* Purple ribbon texture pattern */
+/* Dark Automotive Luxury Utilities */
 @layer utilities {
-  .ribbon-texture {
-    background-image: 
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        hsl(var(--purple-deep) / 0.03) 10px,
-        hsl(var(--purple-deep) / 0.03) 20px
-      );
+
+  /* Purple Accent Bars - Horizontal decorative elements */
+  .purple-accent-bar {
+    position: relative;
   }
-  
+
+  .purple-accent-bar::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, hsl(var(--purple-deep)), hsl(var(--purple-light)));
+    box-shadow: 0 0 10px hsl(var(--purple-deep) / 0.8);
+  }
+
+  /* Purple Glow Text */
+  .text-glow-purple {
+    text-shadow:
+      0 0 20px hsl(var(--purple-deep) / 0.8),
+      0 0 40px hsl(var(--purple-medium) / 0.5),
+      0 0 60px hsl(var(--purple-light) / 0.3);
+  }
+
   .text-stroke-purple {
-    -webkit-text-stroke: 2px hsl(var(--purple-deep));
-    text-shadow: 
+    -webkit-text-stroke: 1px hsl(var(--purple-deep));
+    text-shadow:
       0 0 20px hsl(var(--purple-medium) / 0.5),
       0 0 40px hsl(var(--purple-light) / 0.3);
   }
-  
+
+  /* Dark overlay for images */
+  .dark-overlay {
+    position: relative;
+  }
+
+  .dark-overlay::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+    z-index: 1;
+  }
+
+  /* Purple gradient border */
+  .border-gradient-purple {
+    border: 2px solid transparent;
+    background-image:
+      linear-gradient(hsl(var(--background)), hsl(var(--background))),
+      linear-gradient(135deg, hsl(var(--purple-deep)), hsl(var(--purple-light)));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
-  
+
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
-  
+
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+
   }
 }
 

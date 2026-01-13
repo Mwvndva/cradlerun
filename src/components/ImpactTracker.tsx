@@ -6,10 +6,10 @@ const ImpactTracker = () => {
   const [fundsRaised, setFundsRaised] = useState(0);
   const targetKm = 1250;
   const targetFunds = 3000000; // KSh 3M
-  
+
   const kmProgress = (kmDriven / targetKm) * 100;
   const fundsProgress = (fundsRaised / targetFunds) * 100;
-  
+
   return (
     <section className="py-20 md:py-32 bg-gradient-to-br from-purple-deep to-accent text-white relative overflow-hidden">
       {/* Decorative Elements */}
@@ -17,17 +17,17 @@ const ImpactTracker = () => {
         <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bebas mb-4">
             LIVE IMPACT TRACKER
           </h2>
           <p className="text-xl opacity-90">
-            Every kilometer driven = KSh donated to GBV shelters
+            Every kilometer driven = KSh donated to charitable initiatives
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* KM Counter */}
@@ -40,7 +40,7 @@ const ImpactTracker = () => {
                   Kilometers Driven
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-3 overflow-hidden">
-                  <div 
+                  <div
                     className="bg-secondary h-full rounded-full transition-all duration-500"
                     style={{ width: `${kmProgress}%` }}
                   ></div>
@@ -50,7 +50,7 @@ const ImpactTracker = () => {
                 </div>
               </div>
             </Card>
-            
+
             {/* Funds Counter */}
             <Card className="bg-white/10 backdrop-blur-lg border-white/20 p-8">
               <div className="text-center">
@@ -58,10 +58,10 @@ const ImpactTracker = () => {
                   KSh {(fundsRaised / 1000000).toFixed(2)}M
                 </div>
                 <div className="text-sm uppercase tracking-wider opacity-80 mb-4">
-                  Raised for GBV Shelters
+                  Raised for Charity
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-3 overflow-hidden">
-                  <div 
+                  <div
                     className="bg-secondary h-full rounded-full transition-all duration-500"
                     style={{ width: `${fundsProgress}%` }}
                   ></div>
@@ -72,14 +72,14 @@ const ImpactTracker = () => {
               </div>
             </Card>
           </div>
-          
+
           {/* Impact Statement */}
           <div className="text-center bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <p className="text-2xl md:text-3xl font-bebas mb-4">
               YOUR JOURNEY CREATES IMPACT
             </p>
             <p className="text-lg opacity-90">
-              Every car that joins adds support GBV shelters across Kenya. 
+              Every car that joins adds support to charitable initiatives across Kenya.
               Together, we're not just driving — we're driving change.
             </p>
           </div>

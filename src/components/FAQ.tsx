@@ -7,64 +7,56 @@ import {
 
 const faqs = [
   {
-    question: "Why purple?",
-    answer: "Purple is the global color for Gender-Based Violence awareness. The purple ribbon symbolizes courage, survival, and the fight against domestic violence and abuse."
+    question: "What is included in the $4,500 investment?",
+    answer: "The team entry covers the complete 4-day rally experience for a Driver and Co-Driver. This includes elite accommodation references, return flights, vehicle freight and logistics, 24/7 tactical medical support, advanced route clearing, and an exclusive driver's pack with premium merchandise."
   },
   {
-    question: "Do I have to speak at the Purple Pit-Stop Talks?",
-    answer: "No. Just drive. Your kilometers speak. The talks are brief 5-minute awareness sessions at each stop, but participation is voluntary. Your presence and journey contribute to the cause."
+    question: "What defines the route?",
+    answer: "The Cradle Run 2026 traverses 700+ kilometers of Kenya's most spectacular landscapes. Starting from the urban luxury of Nairobi, we journey through scenic escarpments and savannas, concluding with a grand finale in coastal Malindi. Detailed navigation is provided by our precision team."
   },
   {
-    question: "What's included in the Purple Pass?",
-    answer: "Everything you need for the 7-day journey: Rally passport with GPS tracking, 14 meal vouchers, access to 3 Purple Parties, exclusive merch pack (jacket, cap, keyholder), a finisher medal, and a GBV Awareness Certificate co-signed by LVCT Health."
+    question: "What vehicles are eligible for the rally?",
+    answer: "We welcome all performance and luxury vehicles that embody the spirit of the drive. Whether it's a modern supercar, a classic grand tourer, or a performance SUV, your vehicle should be ready for a 700km grand tour. All cars undergo a pre-rally technical inspection."
   },
   {
-    question: "Can I join with my own car?",
-    answer: "Yes! The Purple Pass covers 2 passengers and 1 car. Your vehicle will be marked with purple ribbon decals (provided) and you'll follow the GPS-tracked route with all participants."
+    question: "How does the charity impact work?",
+    answer: "We believe in driving with purpose. 10% of every team's entry fee is donated directly to our charitable partners to support critical medical needs. Additionally, we use our convoy's presence to raise awareness and funds along the route."
   },
   {
-    question: "How does the impact tracker work?",
-    answer: "For every car that joins (KSh 30,000 pass), KSh 1,000 is donated to GBV shelters. Additionally, every kilometer driven adds to our collective goal of raising KSh 3M for support services across Kenya."
+    question: "Is this a race?",
+    answer: "The Cradle Run is a luxury grand tour, not a timed race. While we appreciate performance, safety and experience are paramount. We travel in a coordinated convoy with pace cars and professional logistics support to ensure a seamless journey."
   },
   {
-    question: "What happens at the Purple Parties?",
-    answer: "Three special events: Day 0 kickoff in Nairobi with silent auction, Day 3 rave in Eldoret featuring survivor stories and dance, and Day 7 beach finale in Mombasa with candlelight vigil."
-  },
-  {
-    question: "Is accommodation included?",
-    answer: "The Purple Pass covers meals and activities. Accommodation is not included, giving you flexibility to choose lodging that fits your budget. We'll provide recommended hotels near each stop."
-  },
-  {
-    question: "What if I need to contact GBV support services?",
-    answer: "The national GBV hotline is 1195 (toll-free). Your NFC keyholder links directly to this number. Our partner LVCT Health also provides resources throughout the journey."
+    question: "What support is provided during the drive?",
+    answer: "Your safety and asset integrity are our top priority. The convoy is flanked by a dedicated 'Pit Crew' for mechanical assists, a fully equipped medical unit, and security detail. You focus on the drive; we handle the contingencies."
   }
 ];
 
 const FAQ = () => {
   return (
-    <section className="py-20 md:py-32 bg-muted">
+    <section className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bebas text-foreground mb-4">
+          <h2 className="text-4xl md:text-6xl font-bebas text-white mb-4">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-white/70">
             Everything you need to know about CRADLE RUN 2026
           </p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem 
-                key={index} 
+              <AccordionItem
+                key={index}
                 value={`item-${index}`}
-                className="bg-card border border-border rounded-lg px-6"
+                className="bg-card border border-primary/30 rounded-lg px-6"
               >
-                <AccordionTrigger className="text-left hover:text-purple-deep">
+                <AccordionTrigger className="text-left text-white hover:text-primary">
                   <span className="font-bebas text-lg">{faq.question}</span>
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-white/70">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

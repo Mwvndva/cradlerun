@@ -3,7 +3,7 @@ import ribbonIcon from "@/assets/purple-ribbon.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-purple-deep to-accent text-white">
+    <footer className="bg-black border-t border-primary/20 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
@@ -19,7 +19,7 @@ const Footer = () => {
               Every season, a new fight. Same road. Rallying across Kenya to create awareness and drive change.
             </p>
           </div>
-          
+
           {/* Partners */}
           <div>
             <h3 className="font-bebas text-xl mb-4">SEASON 1 PARTNERS</h3>
@@ -30,7 +30,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Contact & Emergency */}
           <div>
             <h3 className="font-bebas text-xl mb-4">CONTACT & SUPPORT</h3>
@@ -61,7 +61,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-sm opacity-80 mb-2">
