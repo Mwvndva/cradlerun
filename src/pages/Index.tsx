@@ -14,7 +14,7 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Background Image Container - From Hero to FAQ */}
       <div
-        className="relative bg-cover bg-center bg-fixed bg-no-repeat"
+        className="relative bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         {/* Dark overlay for better text readability */}
