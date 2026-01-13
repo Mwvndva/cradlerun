@@ -24,7 +24,7 @@ const Hero = () => {
 
           {/* Main Heading with Purple Accent Bar */}
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bebas text-white mb-4 leading-none tracking-tight">
+            <h1 className="text-5xl md:text-8xl lg:text-9xl font-bebas text-white mb-4 leading-none tracking-tight">
               CRADLE RUN
               <br />
               <span className="text-primary text-purple">2026</span>
@@ -51,15 +51,15 @@ const Hero = () => {
           {/* Stats */}
           <div className="flex flex-wrap justify-center gap-12 mb-12">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bebas text-primary">4</div>
+              <div className="text-4xl md:text-6xl font-bebas text-primary">4</div>
               <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Days</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bebas text-primary">700+</div>
+              <div className="text-4xl md:text-6xl font-bebas text-primary">700+</div>
               <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Kilometers</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bebas text-primary">1</div>
+              <div className="text-4xl md:text-6xl font-bebas text-primary">1</div>
               <div className="text-sm text-white/60 uppercase tracking-widest mt-1">Mission</div>
             </div>
           </div>
@@ -68,7 +68,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-12 md:px-16 py-6 md:py-8 h-auto font-bebas tracking-wider shadow-purple-lg transition-all hover:shadow-purple-glow hover:scale-105"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-12 md:px-16 py-6 md:py-8 h-auto font-bebas tracking-wider shadow-purple-lg transition-all hover:shadow-purple-glow hover:scale-105"
               onClick={() => setIsModalOpen(true)}
             >
               Become a Member
@@ -76,12 +76,12 @@ const Hero = () => {
 
             <NavLink
               to="/impact"
-              className="inline-block"
+              className="inline-block w-full sm:w-auto"
             >
               <Button
                 size="lg"
                 variant="outline"
-                className="text-base md:text-lg px-8 md:px-10 py-6 md:py-7 h-auto bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all flex items-center gap-3 font-semibold tracking-wide"
+                className="w-full sm:w-auto text-base md:text-lg px-8 md:px-10 py-6 md:py-7 h-auto bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-3 font-semibold tracking-wide"
               >
                 <Circle className="w-3 h-3 fill-primary animate-pulse" />
                 Live Impact Tracker

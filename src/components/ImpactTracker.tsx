@@ -11,7 +11,7 @@ const ImpactTracker = () => {
   const fundsProgress = (fundsRaised / targetFunds) * 100;
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-purple-deep to-accent text-white relative overflow-hidden">
+    <section className="py-12 md:py-32 bg-gradient-to-br from-purple-deep to-accent text-white relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>

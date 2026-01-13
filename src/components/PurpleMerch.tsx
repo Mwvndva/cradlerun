@@ -66,7 +66,7 @@ const PurpleMerch = () => {
   const currentItem = merchItems[currentIndex];
 
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-12 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-bebas text-foreground mb-4">
