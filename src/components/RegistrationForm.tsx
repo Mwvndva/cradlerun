@@ -698,15 +698,33 @@ export function RegistrationForm({ isOpen, onClose }: RegistrationFormProps) {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-background border-primary/30">
+            <DialogContent className="w-[95vw] max-w-[95vw] md:max-w-4xl max-h-[90vh] overflow-y-auto bg-background border-primary/30 p-4 md:p-6">
                 <DialogHeader>
                     <DialogTitle className="text-3xl font-bebas text-primary text-center">
                         CRADLE RUN 2026 REGISTRATION
                     </DialogTitle>
                 </DialogHeader>
 
-                {/* Progress Indicator */}
-                <div className="flex items-center justify-between mb-8">
+                {/* Progress Indicator - Mobile */}
+                <div className="md:hidden mb-6">
+                    <div className="flex justify-between items-end mb-2">
+                        <span className="font-bebas text-xl text-primary">
+                            Step {currentStep}
+                        </span>
+                        <span className="text-xs text-white/50 uppercase tracking-widest">
+                            of {totalSteps}
+                        </span>
+                    </div>
+                    <div className="w-full bg-primary/10 h-1.5 rounded-full overflow-hidden">
+                        <div
+                            className="bg-primary h-full rounded-full transition-all duration-300"
+                            style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+                        />
+                    </div>
+                </div>
+
+                {/* Progress Indicator - Desktop */}
+                <div className="hidden md:flex items-center justify-between mb-8">
                     {[1, 2, 3, 4, 5].map((step) => (
                         <div key={step} className="flex items-center">
                             <div
