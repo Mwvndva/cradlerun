@@ -68,7 +68,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               size="lg"
-              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-xl md:text-2xl px-12 md:px-16 py-6 md:py-8 h-auto font-bebas tracking-wider shadow-purple-lg transition-all hover:shadow-purple-glow hover:scale-105"
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white text-lg md:text-2xl px-8 md:px-16 py-3 md:py-8 h-auto font-bebas tracking-wider shadow-purple-lg transition-all hover:shadow-purple-glow hover:scale-105"
               onClick={() => setIsModalOpen(true)}
             >
               Become a Member
@@ -81,7 +81,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="w-full sm:w-auto text-base md:text-lg px-8 md:px-10 py-6 md:py-7 h-auto bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-3 font-semibold tracking-wide"
+                className="w-full sm:w-auto text-sm md:text-lg px-6 md:px-10 py-3 md:py-7 h-auto bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all flex items-center justify-center gap-3 font-semibold tracking-wide"
               >
                 <Circle className="w-3 h-3 fill-primary animate-pulse" />
                 Live Impact Tracker
