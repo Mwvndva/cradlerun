@@ -12,23 +12,11 @@ const Footer = () => {
 
               <div>
                 <div className="font-bebas text-2xl">CRADLE RUN™</div>
-                <div className="text-sm opacity-80">2026 – PURPLE MILE</div>
               </div>
             </div>
             <p className="text-sm opacity-90 leading-relaxed">
               Every season, a new fight. Same road. Rallying across Kenya to create awareness and drive change.
             </p>
-          </div>
-
-          {/* Partners */}
-          <div>
-            <h3 className="font-bebas text-xl mb-4">SEASON 1 PARTNERS</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                USIKIMYE
-              </li>
-            </ul>
           </div>
 
           {/* Contact & Emergency */}
@@ -54,7 +42,7 @@ const Footer = () => {
                 <div>
                   <div className="font-semibold">Follow the Journey</div>
                   <a href="https://instagram.com/cradlerun" target="_blank" rel="noopener noreferrer" className="opacity-90 hover:opacity-100">
-                    @cradlerun #PurpleMile
+                    @cradlerun
                   </a>
                 </div>
               </li>

@@ -1,224 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* CRADLE RUN 2026 - DARK AUTOMOTIVE LUXURY Theme */
-    --background: 0 0% 3%;
+    /* CRADLE RUN - MIDNIGHT GOLD Theme */
+    --black: 0 0% 4%;
+    /* #0A0A0A */
+    --black-light: 0 0% 7%;
+    /* #111111 */
+    --black-lighter: 0 0% 10%;
+    /* #1A1A1A */
+
+    --gold: 48 100% 50%;
+    /* #FFD700 */
+    --gold-dark: 43 74% 49%;
+    /* #B8860B */
+    --gold-light: 48 100% 66%;
+    /* #FFDF50 */
+
+    /* Shadcn/Tailwind Mappings */
+    --background: var(--black);
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 8%;
+    --card: var(--black-light);
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8%;
+    --popover: var(--black-light);
     --popover-foreground: 0 0% 100%;
 
-    /* Vibrant Purple - Primary brand color */
-    --primary: 270 91% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: var(--gold);
+    --primary-foreground: 0 0% 4%;
+    /* Black text on Gold */
 
-    /* Bright Purple - Secondary */
-    --secondary: 270 95% 70%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: var(--gold-dark);
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: var(--black-lighter);
+    --muted-foreground: 0 0% 53%;
+    /* #888888 */
 
-    /* Electric Purple - Accent */
-    --accent: 270 100% 75%;
-    --accent-foreground: 0 0% 0%;
+    --accent: var(--gold-light);
+    --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 270 91% 65%;
+    --border: var(--black-lighter);
+    --input: var(--black-lighter);
+    --ring: var(--gold);
 
     --radius: 0.5rem;
 
-    /* Custom Purple Mile colors - Dark Theme */
-    --purple-deep: 270 91% 65%;
-    --purple-medium: 270 95% 70%;
-    --purple-light: 270 100% 75%;
-    --purple-vibrant: 270 100% 80%;
-    --purple-gradient-start: 270 91% 65%;
-    --purple-gradient-end: 270 100% 75%;
-
-    /* Gradients */
-    --gradient-purple: linear-gradient(135deg, hsl(var(--purple-deep)), hsl(var(--purple-light)));
-    --gradient-hero: linear-gradient(180deg, rgba(0, 0, 0, 0.85), rgba(10, 10, 10, 0.9));
-
-    /* Shadows with purple glow */
-    --shadow-purple: 0 10px 40px -10px hsl(var(--purple-deep) / 0.6);
-    --shadow-purple-lg: 0 20px 60px -15px hsl(var(--purple-deep) / 0.8);
-    --shadow-purple-glow: 0 0 30px hsl(var(--purple-deep) / 0.5);
-
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 5%;
-
-    --sidebar-foreground: 0 0% 90%;
-
-    --sidebar-primary: 270 91% 65%;
-
-    --sidebar-primary-foreground: 0 0% 100%;
-
-    --sidebar-accent: 0 0% 15%;
-
-    --sidebar-accent-foreground: 0 0% 100%;
-
-    --sidebar-border: 0 0% 20%;
-
-    --sidebar-ring: 270 91% 65%;
+    /* Custom Variables */
+    --gold-gradient: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
+    --black-gradient: linear-gradient(135deg, #0A0A0A 0%, #111 50%, #0A0A0A 100%);
   }
 
   .dark {
-    --background: 0 0% 3%;
+    /* Same as root for this theme as it's dark by default */
+    --background: var(--black);
     --foreground: 0 0% 100%;
-
-    --card: 0 0% 8%;
+    --card: var(--black-light);
     --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 8%;
+    --popover: var(--black-light);
     --popover-foreground: 0 0% 100%;
-
-    --primary: 270 91% 65%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 270 95% 70%;
-    --secondary-foreground: 0 0% 0%;
-
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
-
-    --accent: 270 100% 75%;
-    --accent-foreground: 0 0% 0%;
-
+    --primary: var(--gold);
+    --primary-foreground: 0 0% 4%;
+    --secondary: var(--gold-dark);
+    --secondary-foreground: 0 0% 100%;
+    --muted: var(--black-lighter);
+    --muted-foreground: 0 0% 53%;
+    --accent: var(--gold-light);
+    --accent-foreground: 0 0% 4%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 270 91% 65%;
-  }
-}
-
-/* Custom fonts */
-@layer base {
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-  }
-
-  .font-bebas {
-    font-family: 'Inter', sans-serif !important;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-  }
-}
-
-/* Dark Automotive Luxury Utilities */
-@layer utilities {
-
-  /* Purple Accent Bars - Horizontal decorative elements */
-  .purple-accent-bar {
-    position: relative;
-  }
-
-  .purple-accent-bar::after {
-    content: '';
-    position: absolute;
-    bottom: -12px;
-    left: 0;
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, hsl(var(--purple-deep)), hsl(var(--purple-light)));
-    box-shadow: 0 0 10px hsl(var(--purple-deep) / 0.8);
-  }
-
-  /* Purple Glow Text */
-  .text-glow-purple {
-    text-shadow:
-      0 0 20px hsl(var(--purple-deep) / 0.8),
-      0 0 40px hsl(var(--purple-medium) / 0.5),
-      0 0 60px hsl(var(--purple-light) / 0.3);
-  }
-
-  .text-stroke-purple {
-    -webkit-text-stroke: 1px hsl(var(--purple-deep));
-    text-shadow:
-      0 0 20px hsl(var(--purple-medium) / 0.5),
-      0 0 40px hsl(var(--purple-light) / 0.3);
-  }
-
-  /* Dark overlay for images */
-  .dark-overlay {
-    position: relative;
-  }
-
-  .dark-overlay::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
-    z-index: 1;
-  }
-
-  /* Purple gradient border */
-  .border-gradient-purple {
-    border: 2px solid transparent;
-    background-image:
-      linear-gradient(hsl(var(--background)), hsl(var(--background))),
-      linear-gradient(135deg, hsl(var(--purple-deep)), hsl(var(--purple-light)));
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  }
-
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0px);
-    }
-
-    50% {
-      transform: translateY(-20px);
-    }
-
+    --border: var(--black-lighter);
+    --input: var(--black-lighter);
+    --ring: var(--gold);
   }
 }
 
@@ -228,6 +89,60 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    background-color: #0A0A0A;
+    /* Fallback */
+    overflow-x: hidden;
+  }
+
+  /* Typography mappings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
+  }
+
+  .font-bebas {
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .font-oswald {
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(180deg, hsl(var(--gold)) 0%, hsl(var(--gold-dark)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-white-gradient {
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
   }
 }

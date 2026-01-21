@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRADLE RUN - MIDNIGHT GOLD</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --black: #0A0A0A;
+      --black-light: #111111;
+      --black-lighter: #1A1A1A;
+      --gold: #FFD700;
+      --gold-dark: #B8860B;
+      --gold-light: #FFDF50;
+      --white: #FFFFFF;
+      --gray: #888888;
+      --gray-dark: #444444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0A0A0A 0%, #111 50%, #0A0A0A 100%);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 28px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(80px, 15vw, 200px);
+      font-weight: 400;
+      letter-spacing: 12px;
+      line-height: 0.9;
+      margin-bottom: 20px;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 100px rgba(255, 215, 0, 0.2);
+    }
+
+    .hero-tagline {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(16px, 2.5vw, 24px);
+      font-weight: 400;
+      letter-spacing: 10px;
+      color: var(--white);
+      margin-bottom: 50px;
+      text-transform: uppercase;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 80px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 80px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gray);
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .cta-primary {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+      color: var(--black);
+      border: none;
+      padding: 22px 60px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 50px rgba(255, 215, 0, 0.25);
+    }
+
+    .spots-left {
+      margin-top: 24px;
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* SECTION HEADERS */
+    .section {
+      padding: 120px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 8vw, 90px);
+      letter-spacing: 6px;
+      margin-bottom: 60px;
+    }
+
+    /* URGENCY BANNER */
+    .urgency-banner {
+      background: var(--gold);
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .urgency-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 7vw, 64px);
+      letter-spacing: 5px;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .urgency-subtitle {
+      font-size: 14px;
+      color: var(--black);
+      opacity: 0.8;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      background: var(--black);
+      padding: 24px 36px;
+      border-radius: 8px;
+    }
+
+    .countdown-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 56px;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .countdown-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--white);
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .cta-dark {
+      background: var(--black);
+      color: var(--gold);
+      border: none;
+      padding: 20px 50px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .cta-dark:hover {
+      background: var(--black-lighter);
+    }
+
+    /* COLOR PALETTE */
+    .palette {
+      background: var(--black-light);
+      border-radius: 20px;
+      padding: 60px;
+      border: 1px solid var(--black-lighter);
+    }
+
+    .palette-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 42px;
+      letter-spacing: 4px;
+      margin-bottom: 8px;
+    }
+
+    .palette-vibe {
+      color: var(--gray);
+      font-size: 14px;
+      margin-bottom: 50px;
+      font-style: italic;
+    }
+
+    .color-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .color-block {
+      height: 160px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      position: relative;
+    }
+
+    .color-sample {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+    }
+
+    .color-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .color-name {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .color-hex {
+      font-family: 'SF Mono', Monaco, monospace;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    /* LOGO SHOWCASE */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .logo-card {
+      aspect-ratio: 16/10;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-card.dark {
+      background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 100%);
+      border: 1px solid var(--black-lighter);
+    }
+
+    .logo-card.gold {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    }
+
+    .logo-card.bordered {
+      background: var(--black);
+      border: 2px solid var(--gold);
+    }
+
+    .logo-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .logo-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .logo-pre {
+      font-size: 10px;
+      letter-spacing: 5px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 52px;
+      letter-spacing: 10px;
+      line-height: 1;
+    }
+
+    .logo-sub {
+      font-size: 11px;
+      letter-spacing: 8px;
+      margin-top: 12px;
+    }
+
+    .logo-divider {
+      width: 60px;
+      height: 2px;
+      margin: 16px auto;
+    }
+
+    .logo-label {
+      position: absolute;
+      bottom: 20px;
+      font-size: 10px;
+      letter-spacing: 3px;
+      opacity: 0.5;
+      text-transform: uppercase;
+    }
+
+    /* MONOGRAM */
+    .monogram-box {
+      border: 2px solid var(--gold);
+      padding: 40px 50px;
+      position: relative;
+    }
+
+    .monogram-box::before {
+      content: 'EST. 2026';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--black);
+      padding: 0 16px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gold);
+    }
+
+    .monogram {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 64px;
+      letter-spacing: 8px;
+      color: var(--gold);
+    }
+
+    /* WEBSITE PREVIEW */
+    .website-preview {
+      background: var(--black-light);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--black-lighter);
+    }
+
+    .browser-chrome {
+      background: var(--black-lighter);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #222;
+    }
+
+    .browser-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .browser-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gray-dark);
+    }
+
+    .browser-url {
+      flex: 1;
+      background: var(--black);
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    .website-hero {
+      background: var(--black);
+      padding: 100px 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .website-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(255, 215, 0, 0.06) 0%, transparent 60%);
+    }
+
+    .web-badge {
+      display: inline-block;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 8px 20px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .web-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 72px;
+      letter-spacing: 10px;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dark) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .web-tagline {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      letter-spacing: 8px;
+      color: var(--gray);
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .web-cta {
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      padding: 18px 45px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      position: relative;
+    }
+
+    .web-urgency {
+      margin-top: 20px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      position: relative;
+    }
+
+    .web-stats {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      padding: 35px;
+      background: var(--black);
+      border-top: 1px solid var(--gold);
+    }
+
+    .web-stat {
+      text-align: center;
+    }
+
+    .web-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 40px;
+      color: var(--gold);
+    }
+
+    .web-stat-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    /* VEHICLE NUMBER */
+    .number-plate-showcase {
+      text-align: center;
+      padding: 80px 20px;
+      background: var(--black-light);
+      border-top: 1px solid var(--black-lighter);
+      border-bottom: 1px solid var(--black-lighter);
+    }
+
+    .number-plate {
+      display: inline-block;
+      background: var(--black);
+      padding: 40px 80px;
+      border: 3px solid var(--gold);
+      position: relative;
+    }
+
+    .number-plate::before,
+    .number-plate::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--gold);
+    }
+
+    .number-plate::before {
+      top: 12px;
+      left: 12px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .number-plate::after {
+      bottom: 12px;
+      right: 12px;
+      border-left: none;
+      border-top: none;
+    }
+
+    .plate-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 120px;
+      color: var(--gold);
+      line-height: 1;
+      text-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+    }
+
+    .plate-brand {
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      letter-spacing: 8px;
+      color: var(--white);
+      margin-top: 12px;
+    }
+
+    /* MERCH */
+    .merch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .merch-card {
+      background: var(--black-light);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--black-lighter);
+      transition: all 0.3s ease;
+    }
+
+    .merch-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-5px);
+    }
+
+    .merch-preview {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black);
+    }
+
+    .merch-info {
+      padding: 28px;
+    }
+
+    .merch-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      letter-spacing: 3px;
+      margin-bottom: 6px;
+    }
+
+    .merch-desc {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* INSTAGRAM MOCKUP */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+    }
+
+    .insta-post {
+      aspect-ratio: 1;
+      background: var(--black-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .insta-post.gold-bg {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    }
+
+    .insta-post.bordered {
+      border: 2px solid var(--gold);
+      background: var(--black);
+    }
+
+    .insta-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-align: center;
+      padding: 20px;
+      line-height: 1.3;
+    }
+
+    .insta-text.dark {
+      color: var(--black);
+    }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--black);
+      padding: 150px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+    }
+
+    .final-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(48px, 10vw, 110px);
+      letter-spacing: 8px;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+
+    .final-title span {
+      background: linear-gradient(180deg, var(--white) 0%, rgba(255, 255, 255, 0.6) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .final-sub {
+      font-size: 16px;
+      color: var(--gray);
+      margin-bottom: 60px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--black-lighter);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      letter-spacing: 8px;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .footer-tagline {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gray);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .hero-stats {
+        gap: 40px;
+      }
+
+      .stat-number {
+        font-size: 56px;
+      }
+
+      .countdown {
+        gap: 20px;
+      }
+
+      .countdown-item {
+        padding: 20px 28px;
+      }
+
+      .countdown-number {
+        font-size: 42px;
+      }
+
+      .logo-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .insta-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .web-stats {
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">ONLY 30 SPOTS AVAILABLE</div>
+    <h1>CRADLE RUN</h1>
+    <p class="hero-tagline">Kenya's Most Exclusive Supercar Rally</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number">560</div>
+        <div class="stat-label">Kilometers</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">30</div>
+        <div class="stat-label">Supercars</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">4</div>
+        <div class="stat-label">Days</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$8K</div>
+        <div class="stat-label">Entry</div>
+      </div>
+    </div>
+
+    <button class="cta-primary">APPLY NOW</button>
+    <p class="spots-left">FOUNDING MEMBER PRICING ENDS SOON</p>
+  </section>
+
+  <!-- URGENCY BANNER -->
+  <section class="urgency-banner">
+    <h2 class="urgency-title">12 SPOTS REMAINING</h2>
+    <p class="urgency-subtitle">Founding Member pricing closes in</p>
+
+    <div class="countdown">
+      <div class="countdown-item">
+        <div class="countdown-number">06</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number">14</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <div class="countdown-number">32</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+    </div>
+
+    <button class="cta-dark">SECURE YOUR SPOT</button>
+  </section>
+
+  <!-- COLOR PALETTE -->
+  <section class="section">
+    <div class="section-label">Brand Identity</div>
+    <h2 class="section-title">MIDNIGHT GOLD</h2>
+
+    <div class="palette">
+      <h3 class="palette-name">THE PALETTE</h3>
+      <p class="palette-vibe">"Black tie meets checkered flag. Unapologetic luxury."</p>
+
+      <div class="color-row">
+        <div class="color-block" style="background: var(--black); border: 1px solid #333;">
+          <span class="color-sample" style="color: var(--gold);">Aa</span>
+          <div class="color-info">
+            <span class="color-name" style="color: var(--gold);">Midnight Black</span>
+            <span class="color-hex" style="color: var(--gold);">#0A0A0A</span>
+          </div>
+        </div>
+        <div class="color-block" style="background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);">
+          <span class="color-sample" style="color: var(--black);">Aa</span>
+          <div class="color-info">
+            <span class="color-name" style="color: var(--black);">Championship Gold</span>
+            <span class="color-hex" style="color: var(--black);">#FFD700</span>
+          </div>
+        </div>
+        <div class="color-block" style="background: var(--gold-dark);">
+          <span class="color-sample" style="color: var(--black);">Aa</span>
+          <div class="color-info">
+            <span class="color-name" style="color: var(--black);">Deep Gold</span>
+            <span class="color-hex" style="color: var(--black);">#B8860B</span>
+          </div>
+        </div>
+        <div class="color-block" style="background: var(--white);">
+          <span class="color-sample" style="color: var(--black);">Aa</span>
+          <div class="color-info">
+            <span class="color-name" style="color: var(--black);">Pure White</span>
+            <span class="color-hex" style="color: var(--black);">#FFFFFF</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="color: var(--gray); font-size: 13px; margin-top: 30px; line-height: 1.7;">
+        Maximum contrast. Maximum impact. The palette of champions — F1 podiums, Rolex crowns, Lamborghini showrooms.
+        Black commands attention. Gold celebrates victory. Nothing else needed.
+      </p>
+    </div>
+  </section>
+
+  <!-- LOGO SHOWCASE -->
+  <section class="section">
+    <div class="section-label">Visual Identity</div>
+    <h2 class="section-title">LOGO TREATMENTS</h2>
+
+    <div class="logo-grid">
+      <!-- Primary Logo -->
+      <div class="logo-card dark">
+        <div class="logo-glow"></div>
+        <div class="logo-content">
+          <div class="logo-text"
+            style="background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dark) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+            CRADLE RUN</div>
+          <div class="logo-sub" style="color: var(--gray);">KENYA • 2026</div>
+        </div>
+        <span class="logo-label">PRIMARY — DARK</span>
+      </div>
+
+      <!-- Gold Background -->
+      <div class="logo-card gold">
+        <div class="logo-content">
+          <div class="logo-text" style="color: var(--black);">CRADLE RUN</div>
+          <div class="logo-sub" style="color: rgba(0,0,0,0.5);">KENYA • 2026</div>
+        </div>
+        <span class="logo-label" style="color: rgba(0,0,0,0.4);">INVERTED — GOLD</span>
+      </div>
+
+      <!-- With Border -->
+      <div class="logo-card bordered">
+        <div class="logo-content">
+          <div class="logo-pre" style="color: var(--gold);">MARCH 2026</div>
+          <div class="logo-text" style="color: var(--white);">CRADLE RUN</div>
+          <div class="logo-divider" style="background: var(--gold);"></div>
+          <div class="logo-sub" style="color: var(--gold);">NAIROBI — MALINDI</div>
+        </div>
+        <span class="logo-label">EVENT LOCKUP</span>
+      </div>
+
+      <!-- Monogram -->
+      <div class="logo-card dark">
+        <div class="logo-content">
+          <div class="monogram-box">
+            <div class="monogram">CR</div>
+          </div>
+        </div>
+        <span class="logo-label">MONOGRAM — BADGE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEBSITE PREVIEW -->
+  <section class="section">
+    <div class="section-label">Digital Presence</div>
+    <h2 class="section-title">WEBSITE PREVIEW</h2>
+
+    <div class="website-preview">
+      <div class="browser-chrome">
+        <div class="browser-dots">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+        </div>
+        <div class="browser-url">cradlerun.co.ke</div>
+      </div>
+
+      <div class="website-hero">
+        <div class="web-badge">12 SPOTS REMAINING</div>
+        <div class="web-logo">CRADLE RUN</div>
+        <div class="web-tagline">KENYA'S MOST EXCLUSIVE SUPERCAR RALLY</div>
+        <button class="web-cta">APPLY FOR 2026</button>
+        <div class="web-urgency">FOUNDING MEMBER PRICING ENDS SOON</div>
+      </div>
+
+      <div class="web-stats">
+        <div class="web-stat">
+          <div class="web-stat-num">560</div>
+          <div class="web-stat-label">KILOMETERS</div>
+        </div>
+        <div class="web-stat">
+          <div class="web-stat-num">30</div>
+          <div class="web-stat-label">SUPERCARS</div>
+        </div>
+        <div class="web-stat">
+          <div class="web-stat-num">4</div>
+          <div class="web-stat-label">DAYS</div>
+        </div>
+        <div class="web-stat">
+          <div class="web-stat-num">5★</div>
+          <div class="web-stat-label">RESORTS</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHICLE NUMBER -->
+  <div class="number-plate-showcase">
+    <p
+      style="font-size: 11px; letter-spacing: 4px; color: var(--gray); margin-bottom: 40px; text-transform: uppercase;">
+      Vehicle Number Plate</p>
+    <div class="number-plate">
+      <div class="plate-number">07</div>
+      <div class="plate-brand">CRADLE RUN</div>
+    </div>
+  </div>
+
+  <!-- MERCH GRID -->
+  <section class="section">
+    <div class="section-label">Merchandise</div>
+    <h2 class="section-title">PARTICIPANT KIT</h2>
+
+    <div class="merch-grid">
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div style="font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--gold);">CR</div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">RACING CAP</div>
+          <div class="merch-desc">Black with Gold Embroidery</div>
+        </div>
+      </div>
+
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div
+            style="width: 90px; height: 100px; background: var(--black-light); border: 2px solid var(--gold); display: flex; align-items: flex-start; justify-content: center; padding-top: 20px;">
+            <span style="color: var(--gold); font-size: 9px; letter-spacing: 2px;">CRADLE RUN</span>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">RALLY JACKET</div>
+          <div class="merch-desc">Premium Black with Gold Details</div>
+        </div>
+      </div>
+
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div style="border: 2px solid var(--gold); padding: 14px 28px;">
+            <span
+              style="font-family: 'Bebas Neue', sans-serif; color: var(--gold); font-size: 20px; letter-spacing: 4px;">CRADLE
+              RUN</span>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">VEHICLE DECALS</div>
+          <div class="merch-desc">Gold on Black / Gold on Clear</div>
+        </div>
+      </div>
+
+      <div class="merch-card">
+        <div class="merch-preview">
+          <div style="text-align: center;">
+            <div style="color: var(--gold); font-family: 'Bebas Neue', sans-serif; font-size: 32px;">4K</div>
+            <div style="font-size: 10px; letter-spacing: 3px; color: var(--gray); margin-top: 8px;">MEDIA PACKAGE</div>
+          </div>
+        </div>
+        <div class="merch-info">
+          <div class="merch-name">CONTENT PACKAGE</div>
+          <div class="merch-desc">Personal Reel + Photos + Raw Footage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM MOCKUP -->
+  <section class="section">
+    <div class="section-label">Social Media</div>
+    <h2 class="section-title">INSTAGRAM GRID</h2>
+
+    <div class="insta-grid">
+      <div class="insta-post">
+        <span class="insta-text">12 SPOTS<br>LEFT</span>
+      </div>
+      <div class="insta-post gold-bg">
+        <span class="insta-text dark">CRADLE<br>RUN<br>2026</span>
+      </div>
+      <div class="insta-post">
+        <span class="insta-text">560 KM<br>30 CARS<br>4 DAYS</span>
+      </div>
+      <div class="insta-post gold-bg">
+        <span class="insta-text dark">YOU IN<br>OR YOU<br>OUT</span>
+      </div>
+      <div class="insta-post">
+        <span class="insta-text">NAIROBI<br>—<br>MALINDI</span>
+      </div>
+      <div class="insta-post bordered">
+        <span class="insta-text">APPLY<br>NOW</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2 class="final-title"><span>STOP WATCHING.</span><br><span>START DRIVING.</span></h2>
+    <p class="final-sub">30 supercars. 4 days. 560 kilometers. Nairobi to Malindi. The only question is whether you're
+      in or you're out.</p>
+    <button class="cta-primary">APPLY FOR CRADLE RUN 2026</button>
+    <p class="spots-left" style="margin-top: 30px;">12 OF 30 SPOTS REMAINING</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">CRADLE RUN</div>
+    <div class="footer-tagline">Kenya • 2026</div>
+  </footer>
+
+</body>
+
+</html>
