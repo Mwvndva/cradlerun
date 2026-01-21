@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 
 const Impact = () => {
   const [fundsRaised, setFundsRaised] = useState(0);
@@ -13,6 +14,11 @@ const Impact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Impact & Charity"
+        description="See how the Purple Mile Rally fights against Gender-Based Violence. Every km counts."
+        url="https://cradlerun.com/impact"
+      />
       <section className="py-12 md:py-32 bg-gradient-to-br from-purple-deep to-accent text-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute inset-0 opacity-10">

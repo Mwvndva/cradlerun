@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { RegistrationForm } from "./RegistrationForm";
 import nairobiSkyline from "@/assets/nairobi-skyline.png";
 
 const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -37,10 +34,6 @@ const Hero = () => {
           </div>
         </div>
 
-        <RegistrationForm
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-        />
       </section>
 
       {/* Stats Section - Separated but part of the Hero experience */}
