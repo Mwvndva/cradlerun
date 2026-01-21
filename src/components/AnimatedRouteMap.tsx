@@ -15,6 +15,10 @@ const AnimatedRouteMap = () => {
         setStartAnimation(true);
     }, []);
 
+    const handleLocationInteraction = (location: string | null) => {
+        setHoveredLocation(prev => prev === location ? null : location);
+    };
+
     // SVG ViewBox: 0 0 800 500
     // Wilson Airport (Nairobi): 100, 100
     // African Heritage House: 140, 130
@@ -51,96 +55,138 @@ const AnimatedRouteMap = () => {
     };
 
     return (
-        <section className="bg-black py-24 px-5 max-w-7xl mx-auto text-center">
-            <div className="text-sm tracking-[5px] text-primary uppercase mb-4">THE JOURNEY</div>
-            <h2 className="font-bebas text-[48px] md:text-[90px] tracking-[6px] mb-12 text-white leading-none">
+        <section className="bg-black py-12 md:py-24 px-3 md:px-5 max-w-7xl mx-auto text-center">
+            <div className="text-xs md:text-sm tracking-[5px] text-primary uppercase mb-2 md:mb-4">THE JOURNEY</div>
+            <h2 className="font-bebas text-[36px] md:text-[90px] tracking-[3px] md:tracking-[6px] mb-8 md:mb-12 text-white leading-none">
                 NAIROBI TO MALINDI
             </h2>
 
-            <div className="relative rounded-2xl overflow-hidden border border-[#222] shadow-2xl shadow-primary/5 bg-[#0A0A0A] aspect-[16/10]">
+            <div className="relative rounded-2xl overflow-hidden border border-[#222] shadow-2xl shadow-primary/5 bg-[#0A0A0A] aspect-[4/3] md:aspect-[16/10]">
                 {/* Map Background / Grid */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+                <div
+                    className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] md:bg-[size:40px_40px]"
+                    onClick={() => setHoveredLocation(null)}
+                ></div>
 
-                {/* Popups */}
                 <AnimatePresence>
                     {hoveredLocation === "wilson" && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                            className="absolute left-[10%] top-[0%] w-[300px] z-20 pointer-events-none"
+                            key="wilson"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute z-20 pointer-events-none 
+                                     left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[280px]
+                                     md:left-[10%] md:top-[0%] md:translate-x-0 md:translate-y-0 md:w-[300px] md:max-w-none"
                         >
-                            <div className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)]">
-                                <img src={wilsonRover} alt="Wilson Airport" className="w-full h-auto object-cover" />
+                            <motion.div
+                                initial={{ scale: 0.8, y: 20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)] bg-black"
+                            >
+                                <img src={wilsonRover} alt="Wilson Airport" className="w-full h-auto object-cover max-h-[160px] md:max-h-[200px]" />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2 text-left">
                                     <div className="font-bebas text-lg text-white">WILSON AIRPORT</div>
                                     <div className="text-[10px] text-primary uppercase tracking-widest leading-none">STARTING POINT</div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     )}
                     {hoveredLocation === "heritage" && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                            className="absolute left-[15%] top-[10%] w-[300px] z-20 pointer-events-none"
+                            key="heritage"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute z-20 pointer-events-none 
+                                     left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[280px]
+                                     md:left-[15%] md:top-[10%] md:translate-x-0 md:translate-y-0 md:w-[300px] md:max-w-none"
                         >
-                            <div className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)]">
-                                <img src={africanHeritage} alt="African Heritage House" className="w-full h-auto object-cover" />
+                            <motion.div
+                                initial={{ scale: 0.8, y: 20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)] bg-black"
+                            >
+                                <img src={africanHeritage} alt="African Heritage House" className="w-full h-auto object-cover max-h-[160px] md:max-h-[200px]" />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2 text-left">
                                     <div className="font-bebas text-lg text-white">AFRICAN HERITAGE</div>
                                     <div className="text-[10px] text-primary uppercase tracking-widest leading-none">ATHI RIVER</div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     )}
                     {hoveredLocation === "kilaguni" && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                            className="absolute left-[35%] top-[25%] w-[300px] z-20 pointer-events-none"
+                            key="kilaguni"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute z-20 pointer-events-none 
+                                     left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[280px]
+                                     md:left-[35%] md:top-[25%] md:translate-x-0 md:translate-y-0 md:w-[300px] md:max-w-none"
                         >
-                            <div className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)]">
-                                <img src={kilaguniSerena} alt="Kilaguni Serena" className="w-full h-auto object-cover" />
+                            <motion.div
+                                initial={{ scale: 0.8, y: 20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)] bg-black"
+                            >
+                                <img src={kilaguniSerena} alt="Kilaguni Serena" className="w-full h-auto object-cover max-h-[160px] md:max-h-[200px]" />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2 text-left">
                                     <div className="font-bebas text-lg text-white">KILAGUNI SERENA</div>
                                     <div className="text-[10px] text-primary uppercase tracking-widest leading-none">TSAVO WEST</div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     )}
                     {hoveredLocation === "vipingo" && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                            className="absolute left-[50%] top-[60%] w-[300px] z-20 pointer-events-none"
+                            key="vipingo"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute z-20 pointer-events-none 
+                                     left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[280px]
+                                     md:left-[50%] md:top-[60%] md:translate-x-0 md:translate-y-0 md:w-[300px] md:max-w-none"
                         >
-                            <div className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)]">
-                                <img src={vipingoRidge} alt="Vipingo Ridge" className="w-full h-auto object-cover" />
+                            <motion.div
+                                initial={{ scale: 0.8, y: 20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)] bg-black"
+                            >
+                                <img src={vipingoRidge} alt="Vipingo Ridge" className="w-full h-auto object-cover max-h-[160px] md:max-h-[200px]" />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2 text-left">
                                     <div className="font-bebas text-lg text-white">VIPINGO RIDGE</div>
                                     <div className="text-[10px] text-primary uppercase tracking-widest leading-none">KILIFI</div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     )}
                     {hoveredLocation === "billionaire" && (
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                            animate={{ opacity: 1, scale: 1, y: 0 }}
-                            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-                            className="absolute left-[60%] top-[30%] w-[300px] z-20 pointer-events-none"
+                            key="billionaire"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="absolute z-20 pointer-events-none 
+                                     left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[280px]
+                                     md:left-[60%] md:top-[30%] md:translate-x-0 md:translate-y-0 md:w-[300px] md:max-w-none"
                         >
-                            <div className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)]">
-                                <img src={billionaireResort} alt="Billionaire Resort" className="w-full h-auto object-cover" />
+                            <motion.div
+                                initial={{ scale: 0.8, y: 20 }}
+                                animate={{ scale: 1, y: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="relative rounded-lg overflow-hidden border-2 border-primary shadow-[0_0_30px_rgba(255,215,0,0.3)] bg-black"
+                            >
+                                <img src={billionaireResort} alt="Billionaire Resort" className="w-full h-auto object-cover max-h-[160px] md:max-h-[200px]" />
                                 <div className="absolute bottom-0 left-0 right-0 bg-black/80 p-2 text-left">
                                     <div className="font-bebas text-lg text-white">BILLIONAIRE RESORT</div>
                                     <div className="text-[10px] text-primary uppercase tracking-widest leading-none">MALINDI</div>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -185,7 +231,7 @@ const AnimatedRouteMap = () => {
                         custom={0.5} initial="hidden" animate={startAnimation ? "visible" : "hidden"} variants={circleVariants}
                         className="pointer-events-auto cursor-pointer hover:r-7 transition-all duration-300"
                         onMouseEnter={() => setHoveredLocation("wilson")}
-                        onMouseLeave={() => setHoveredLocation(null)}
+                        onClick={(e) => { e.stopPropagation(); handleLocationInteraction("wilson"); }}
                     />
 
                     {/* African Heritage */}
@@ -194,7 +240,7 @@ const AnimatedRouteMap = () => {
                         custom={1.0} initial="hidden" animate={startAnimation ? "visible" : "hidden"} variants={circleVariants}
                         className="pointer-events-auto cursor-pointer hover:r-7 transition-all duration-300"
                         onMouseEnter={() => setHoveredLocation("heritage")}
-                        onMouseLeave={() => setHoveredLocation(null)}
+                        onClick={(e) => { e.stopPropagation(); handleLocationInteraction("heritage"); }}
                     />
 
                     {/* Kilaguni */}
@@ -203,7 +249,7 @@ const AnimatedRouteMap = () => {
                         custom={3.0} initial="hidden" animate={startAnimation ? "visible" : "hidden"} variants={circleVariants}
                         className="pointer-events-auto cursor-pointer hover:r-7 transition-all duration-300"
                         onMouseEnter={() => setHoveredLocation("kilaguni")}
-                        onMouseLeave={() => setHoveredLocation(null)}
+                        onClick={(e) => { e.stopPropagation(); handleLocationInteraction("kilaguni"); }}
                     />
 
                     {/* Vipingo */}
@@ -212,7 +258,7 @@ const AnimatedRouteMap = () => {
                         custom={5.0} initial="hidden" animate={startAnimation ? "visible" : "hidden"} variants={circleVariants}
                         className="pointer-events-auto cursor-pointer hover:r-7 transition-all duration-300"
                         onMouseEnter={() => setHoveredLocation("vipingo")}
-                        onMouseLeave={() => setHoveredLocation(null)}
+                        onClick={(e) => { e.stopPropagation(); handleLocationInteraction("vipingo"); }}
                     />
 
                     {/* Billionaire */}
@@ -221,7 +267,7 @@ const AnimatedRouteMap = () => {
                         custom={6.0} initial="hidden" animate={startAnimation ? "visible" : "hidden"} variants={circleVariants}
                         className="pointer-events-auto cursor-pointer hover:r-10 transition-all duration-300"
                         onMouseEnter={() => setHoveredLocation("billionaire")}
-                        onMouseLeave={() => setHoveredLocation(null)}
+                        onClick={(e) => { e.stopPropagation(); handleLocationInteraction("billionaire"); }}
                     />
                 </svg>
 
@@ -235,10 +281,10 @@ const AnimatedRouteMap = () => {
                     animate={startAnimation ? "visible" : "hidden"}
                     variants={labelVariants}
                     onMouseEnter={() => setHoveredLocation("wilson")}
-                    onMouseLeave={() => setHoveredLocation(null)}
+                    onClick={(e) => { e.stopPropagation(); handleLocationInteraction("wilson"); }}
                 >
-                    <span className="font-oswald text-xs lg:text-sm text-white tracking-wider bg-black/60 px-2 py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">WILSON AIRPORT</span>
-                    <span className="text-[10px] text-primary uppercase tracking-widest mt-1 ml-1">NAIROBI</span>
+                    <span className="font-oswald text-[10px] md:text-sm text-white tracking-wider bg-black/60 px-1.5 md:px-2 py-0.5 md:py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">WILSON AIRPORT</span>
+                    <span className="hidden md:block text-[10px] text-primary uppercase tracking-widest mt-1 ml-1">NAIROBI</span>
                 </motion.div>
 
                 {/* African Heritage */}
@@ -249,10 +295,10 @@ const AnimatedRouteMap = () => {
                     animate={startAnimation ? "visible" : "hidden"}
                     variants={labelVariants}
                     onMouseEnter={() => setHoveredLocation("heritage")}
-                    onMouseLeave={() => setHoveredLocation(null)}
+                    onClick={(e) => { e.stopPropagation(); handleLocationInteraction("heritage"); }}
                 >
-                    <span className="font-oswald text-xs lg:text-sm text-white tracking-wider bg-black/60 px-2 py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">AFRICAN HERITAGE</span>
-                    <span className="text-[10px] text-primary uppercase tracking-widest mt-1 ml-1">ATHI RIVER</span>
+                    <span className="font-oswald text-[10px] md:text-sm text-white tracking-wider bg-black/60 px-1.5 md:px-2 py-0.5 md:py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">AFRICAN HERITAGE</span>
+                    <span className="hidden md:block text-[10px] text-primary uppercase tracking-widest mt-1 ml-1">ATHI RIVER</span>
                 </motion.div>
 
                 {/* Kilaguni */}
@@ -263,10 +309,10 @@ const AnimatedRouteMap = () => {
                     animate={startAnimation ? "visible" : "hidden"}
                     variants={labelVariants}
                     onMouseEnter={() => setHoveredLocation("kilaguni")}
-                    onMouseLeave={() => setHoveredLocation(null)}
+                    onClick={(e) => { e.stopPropagation(); handleLocationInteraction("kilaguni"); }}
                 >
-                    <span className="font-oswald text-xs lg:text-sm text-white tracking-wider bg-black/60 px-2 py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">KILAGUNI SERENA</span>
-                    <span className="text-[10px] text-primary uppercase tracking-widest mt-1">TSAVO WEST</span>
+                    <span className="font-oswald text-[10px] md:text-sm text-white tracking-wider bg-black/60 px-1.5 md:px-2 py-0.5 md:py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">KILAGUNI SERENA</span>
+                    <span className="hidden md:block text-[10px] text-primary uppercase tracking-widest mt-1">TSAVO WEST</span>
                 </motion.div>
 
                 {/* Vipingo */}
@@ -277,10 +323,10 @@ const AnimatedRouteMap = () => {
                     animate={startAnimation ? "visible" : "hidden"}
                     variants={labelVariants}
                     onMouseEnter={() => setHoveredLocation("vipingo")}
-                    onMouseLeave={() => setHoveredLocation(null)}
+                    onClick={(e) => { e.stopPropagation(); handleLocationInteraction("vipingo"); }}
                 >
-                    <span className="font-oswald text-xs lg:text-sm text-white tracking-wider bg-black/60 px-2 py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">VIPINGO RIDGE</span>
-                    <span className="text-[10px] text-primary uppercase tracking-widest mt-1">KILIFI</span>
+                    <span className="font-oswald text-[10px] md:text-sm text-white tracking-wider bg-black/60 px-1.5 md:px-2 py-0.5 md:py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">VIPINGO RIDGE</span>
+                    <span className="hidden md:block text-[10px] text-primary uppercase tracking-widest mt-1">KILIFI</span>
                 </motion.div>
 
                 {/* Billionaire Resort */}
@@ -291,10 +337,10 @@ const AnimatedRouteMap = () => {
                     animate={startAnimation ? "visible" : "hidden"}
                     variants={labelVariants}
                     onMouseEnter={() => setHoveredLocation("billionaire")}
-                    onMouseLeave={() => setHoveredLocation(null)}
+                    onClick={(e) => { e.stopPropagation(); handleLocationInteraction("billionaire"); }}
                 >
-                    <span className="font-oswald text-xs lg:text-sm text-white tracking-wider bg-black/60 px-2 py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">BILLIONAIRE RESORT</span>
-                    <span className="text-[10px] text-primary uppercase tracking-widest mt-1">MALINDI</span>
+                    <span className="font-oswald text-[10px] md:text-sm text-white tracking-wider bg-black/60 px-1.5 md:px-2 py-0.5 md:py-1 rounded border border-primary/30 group-hover:bg-primary/20 transition-colors">BILLIONAIRE RESORT</span>
+                    <span className="hidden md:block text-[10px] text-primary uppercase tracking-widest mt-1">MALINDI</span>
                 </motion.div>
 
             </div>
